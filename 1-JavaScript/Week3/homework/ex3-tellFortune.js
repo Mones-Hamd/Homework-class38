@@ -34,39 +34,30 @@ body, this code is now written once only in a separated function.
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
 function selectRandomly(inputArray) {
-  // TODO complete this function
-  return Math.floor(Math.random()*inputArray.length)
-
+  return Math.floor(Math.random() * inputArray.length);
 }
 
-function tellFortune(arr1,arr2,arr3,arr4) {
-  // TODO complete this function
-  const numKid=arr1[selectRandomly(arr1)] ;
-  const partnerName=arr2[selectRandomly(arr2)];
-  const location= arr3[selectRandomly(arr3)];
-  const jobTitle=arr4[selectRandomly(arr4)];
-  return console.log(`"You will be ${jobTitle} in ${location},married to ${partnerName} with ${numKid} kids`)
+function tellFortune(arr1, arr2, arr3, arr4) {
+  const numKid = arr1[selectRandomly(arr1)];
+  const partnerName = arr2[selectRandomly(arr2)];
+  const location = arr3[selectRandomly(arr3)];
+  const jobTitle = arr4[selectRandomly(arr4)];
+  return `You will be a ${jobTitle} in ${location}, married to ${partnerName} with ${numKid} kids.`;
 }
 
 function main() {
-  const numKids = [
-    // TODO add elements here
-    0,1,2,3
-  ];
+  const numKids = [0, 1, 2, 3, 4];
 
-  const partnerNames = [
-    // TODO add elements here
-    'lilian','lamis','eline','maria'
-  ];
+  const partnerNames = ['lilian', 'Lames', 'Aline', 'maria', 'sara'];
 
-  const locations = [
-    // TODO add elements here
-    'syria','greece','netherland'
-  ];
+  const locations = ['syria', 'greece', 'netherland', 'USA', 'UEA'];
 
   const jobTitles = [
-    // TODO add elements here
-    'accountant','web developer','software developer','geologist'
+    'accountant',
+    'web developer',
+    'software developer',
+    'geologist',
+    'owner',
   ];
 
   console.log(tellFortune(numKids, partnerNames, locations, jobTitles));

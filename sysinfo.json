@@ -1,0 +1,46 @@
+{
+  "node": "v16.15.0",
+  "system": {
+    "manufacturer": "Apple Inc.",
+    "model": "MacBookAir6,2"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i7-4650U",
+    "speed": 1.7
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "darwin",
+    "distro": "Mac OS X",
+    "release": "10.12.6"
+  },
+  "vscodeInfo": {
+    "version": "1.66.1",
+    "extensions": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "hnw.vscode-auto-open-markdown-preview",
+      "ritwickdey.LiveServer",
+      "streetsidesoftware.code-spell-checker",
+      "techer.open-in-browser",
+      "uyiosa-enabulele.tips"
+    ],
+    "userSettings": {
+      "editor.bracketPairColorization.enabled": true,
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.minimap.enabled": false,
+      "editor.renderIndentGuides": true,
+      "editor.tabSize": 2,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "eslint.autoFixOnSave": true,
+      "files.autoSave": "onFocusChange",
+      "prettier.singleQuote": true,
+      "prettier.trailingComma": "all",
+      "window.zoomLevel": -1
+    }
+  }
+}

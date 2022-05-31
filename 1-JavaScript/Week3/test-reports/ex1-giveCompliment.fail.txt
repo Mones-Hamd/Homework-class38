@@ -1,0 +1,4 @@
+
+*** Spell Checker Report ***
+
+ex1-giveCompliment.js:47:21 - Unknown word (Mones)
