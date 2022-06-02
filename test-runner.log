@@ -458,3 +458,40 @@ ex6-totalCost.js
 2022-05-31 07:36:40 info: -------------------------------------------
 2022-05-31 07:36:40 warn: A unit test file was not provided.
 2022-05-31 07:36:44 info: All steps were completed successfully
+2022-06-01 09:39:45 info: ------------------------------------------------
+2022-06-01 09:39:45 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2022-06-01 09:39:45 info: ------------------------------------------------
+2022-06-01 09:39:45 warn: A unit test file was not provided.
+2022-06-01 09:39:48 info: All steps were completed successfully
+2022-06-02 07:34:56 info: -------------------------------------------
+2022-06-02 07:34:56 info: >>> Running Unit Test `ex3-tellFortune` <<<
+2022-06-02 07:34:56 info: -------------------------------------------
+2022-06-02 07:34:59 info: All unit tests passed.
+2022-06-02 07:35:02 info: All steps were completed successfully
+2022-06-02 08:07:23 info: ------------------------------------------------
+2022-06-02 08:07:23 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2022-06-02 08:07:23 info: ------------------------------------------------
+2022-06-02 08:07:23 warn: A unit test file was not provided.
+2022-06-02 08:07:24 error: *** ESLint Report ***
+
+ex5-shoppingCartPure.js
+  20:3  error  Parsing error: Unexpected token ..
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-06-02 08:07:49 info: ------------------------------------------------
+2022-06-02 08:07:49 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2022-06-02 08:07:49 info: ------------------------------------------------
+2022-06-02 08:07:49 warn: A unit test file was not provided.
+2022-06-02 08:07:51 info: All steps were completed successfully
+2022-06-02 08:23:29 info: -------------------------------------------
+2022-06-02 08:23:29 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2022-06-02 08:23:29 info: -------------------------------------------
+2022-06-02 08:23:29 warn: A unit test file was not provided.
+2022-06-02 08:23:31 info: All steps were completed successfully
+2022-06-02 08:33:36 info: ------------------------------------------------
+2022-06-02 08:33:36 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2022-06-02 08:33:36 info: ------------------------------------------------
+2022-06-02 08:33:36 warn: A unit test file was not provided.
+2022-06-02 08:33:38 info: All steps were completed successfully

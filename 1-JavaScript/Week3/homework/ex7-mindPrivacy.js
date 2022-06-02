@@ -30,11 +30,12 @@ const employeeRecords = [
 ];
 
 // ! Function under test
-  function filterPrivateData(employeeInfo) {
-    const employeeData=employeeInfo.map(({name,occupation,email})=>{return{name,occupation,email}});
-    return employeeData 
-    // TODO complete this function
-  }
+function filterPrivateData(employeeInfo) {
+  return employeeInfo.map(({ name, occupation, email }) => {
+    return { name, occupation, email };
+  });
+  // TODO complete this function
+}
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {

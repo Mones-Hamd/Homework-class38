@@ -33,7 +33,7 @@ function calculateTotalPrice(shopList) {
     (acc, value) => acc + shopList[value],
     0
   );
-  return `Total: €${totalPrice}`;
+  return `Total: €${totalPrice.toFixed(2)}`;
 }
 
 // ! Test functions (plain vanilla JavaScript)

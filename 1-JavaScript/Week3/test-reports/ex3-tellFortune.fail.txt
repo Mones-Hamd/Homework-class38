@@ -1,5 +1,0 @@
-
-*** Spell Checker Report ***
-
-ex3-tellFortune.js:51:36 - Unknown word (lamis)
-ex3-tellFortune.js:51:45 - Unknown word (eline)
