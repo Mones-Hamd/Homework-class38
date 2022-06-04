@@ -495,3 +495,456 @@ ex5-shoppingCartPure.js
 2022-06-02 08:33:36 info: ------------------------------------------------
 2022-06-02 08:33:36 warn: A unit test file was not provided.
 2022-06-02 08:33:38 info: All steps were completed successfully
+2022-06-03 05:41:07 info: ------------------------------------------------------
+2022-06-03 05:41:07 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-03 05:41:07 info: ------------------------------------------------------
+2022-06-03 05:41:09 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /Users/test/HYF-homework/Homework-class38/1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js: 'return' outside of function. (20:2)
+
+      18 |     
+      19 |   }
+    > 20 |   return newNumbers;
+         |   ^
+      21 | }
+      22 |
+      23 | // ! Unit test (using Jest)
+
+      at Parser._raise (node_modules/@babel/parser/src/parser/error.js:147:45)
+      at Parser.raiseWithData (node_modules/@babel/parser/src/parser/error.js:142:17)
+      at Parser.raise (node_modules/@babel/parser/src/parser/error.js:91:17)
+      at Parser.parseReturnStatement (node_modules/@babel/parser/src/parser/statement.js:671:12)
+      at Parser.parseStatementContent (node_modules/@babel/parser/src/parser/statement.js:289:21)
+      at Parser.parseStatement (node_modules/@babel/parser/src/parser/statement.js:243:17)
+      at Parser.parseBlockOrModuleBlockBody (node_modules/@babel/parser/src/parser/statement.js:979:25)
+      at Parser.parseBlockBody (node_modules/@babel/parser/src/parser/statement.js:955:10)
+      at Parser.parseProgram (node_modules/@babel/parser/src/parser/statement.js:130:10)
+      at Parser.parseTopLevel (node_modules/@babel/parser/src/parser/statement.js:115:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.641 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-06-03 05:41:10 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  21:1  error  Parsing error: Unexpected token }
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-06-03 05:41:44 info: ------------------------------------------------------
+2022-06-03 05:41:44 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-03 05:41:44 info: ------------------------------------------------------
+2022-06-03 05:41:46 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  ✕ doubleEvenNumbers should take the even numbers and double them (6 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   4,
+    -   8,
+    +   6,
+    +   NaN,
+      ]
+
+      23 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      24 |   const expected = [4, 8];
+    > 25 |   expect(actual).toEqual(expected);
+         |                  ^
+      26 | });
+      27 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:25:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.382 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-06-03 05:42:40 info: ------------------------------------------------------
+2022-06-03 05:42:40 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-03 05:42:40 info: ------------------------------------------------------
+2022-06-03 05:42:42 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /Users/test/HYF-homework/Homework-class38/1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js: Unexpected token (16:73)
+
+      14 |   // TODO rewrite the function body using `map` and `filter`.
+      15 |   const newNumbers = [];
+    > 16 |   numbers.filter((i) => (i % 2 === 0 ? newNumbers.push(numbers[i] * 2) : ));
+         |                                                                          ^
+      17 |
+      18 |   return newNumbers;
+      19 | }
+
+      at Parser._raise (node_modules/@babel/parser/src/parser/error.js:147:45)
+      at Parser.raiseWithData (node_modules/@babel/parser/src/parser/error.js:142:17)
+      at Parser.raise (node_modules/@babel/parser/src/parser/error.js:91:17)
+      at Parser.unexpected (node_modules/@babel/parser/src/parser/util.js:190:16)
+      at Parser.parseExprAtom (node_modules/@babel/parser/src/parser/expression.js:1323:22)
+      at Parser.parseExprSubscripts (node_modules/@babel/parser/src/parser/expression.js:668:23)
+      at Parser.parseUpdate (node_modules/@babel/parser/src/parser/expression.js:648:21)
+      at Parser.parseMaybeUnary (node_modules/@babel/parser/src/parser/expression.js:619:23)
+      at Parser.parseMaybeUnaryOrPrivate (node_modules/@babel/parser/src/parser/expression.js:372:14)
+      at Parser.parseExprOps (node_modules/@babel/parser/src/parser/expression.js:382:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.509 s, estimated 1 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-06-03 05:42:43 error: *** ESLint Report ***
+
+ex1-doubleEvenNumbers.test.js
+  16:74  error  Parsing error: Unexpected token )
+
+✖ 1 problem (1 error, 0 warnings)
+
+
+2022-06-03 05:45:41 info: ------------------------------------------------------
+2022-06-03 05:45:41 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-03 05:45:41 info: ------------------------------------------------------
+2022-06-03 05:45:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-doubleEvenNumbers.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js
+  ✕ doubleEvenNumbers should take the even numbers and double them (5 ms)
+
+  ● doubleEvenNumbers should take the even numbers and double them
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   4,
+    -   8,
+    +   6,
+    +   NaN,
+      ]
+
+      27 |   const actual = doubleEvenNumbers([1, 2, 3, 4]);
+      28 |   const expected = [4, 8];
+    > 29 |   expect(actual).toEqual(expected);
+         |                  ^
+      30 | });
+      31 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex1-doubleEvenNumbers.test.js:29:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.395 s
+Ran all test suites matching /ex1-doubleEvenNumbers.test.js/i.
+2022-06-03 05:50:54 info: ------------------------------------------------------
+2022-06-03 05:50:54 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-03 05:50:54 info: ------------------------------------------------------
+2022-06-03 05:50:56 info: All unit tests passed.
+2022-06-03 05:50:58 info: All steps were completed successfully
+2022-06-03 06:39:09 info: -------------------------------------------------
+2022-06-03 06:39:09 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-06-03 06:39:09 info: -------------------------------------------------
+2022-06-03 06:39:11 info: All unit tests passed.
+2022-06-03 06:39:12 error: *** ESLint Report ***
+
+ex2-mondaysWorth.test.js
+  3:9  error  'keys' is assigned a value but never used      no-unused-vars
+  4:9  error  'duration' is assigned a value but never used  no-unused-vars
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2022-06-03 06:47:48 info: -------------------------------------------------
+2022-06-03 06:47:48 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-06-03 06:47:48 info: -------------------------------------------------
+2022-06-03 06:47:50 info: All unit tests passed.
+2022-06-03 06:47:53 info: All steps were completed successfully
+2022-06-03 07:25:58 info: ------------------------------------------------
+2022-06-03 07:25:58 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2022-06-03 07:25:58 info: ------------------------------------------------
+2022-06-03 07:25:58 warn: A unit test file was not provided.
+2022-06-03 07:26:02 info: All steps were completed successfully
+2022-06-03 07:26:12 info: ------------------------------------------
+2022-06-03 07:26:12 info: >>> Running Unit Test `ex4-observable` <<<
+2022-06-03 07:26:12 info: ------------------------------------------
+2022-06-03 07:26:15 info: All unit tests passed.
+2022-06-03 07:26:18 info: All steps were completed successfully
+2022-06-04 12:10:11 info: ------------------------------------------
+2022-06-04 12:10:11 info: >>> Running Unit Test `ex4-observable` <<<
+2022-06-04 12:10:11 info: ------------------------------------------
+2022-06-04 12:10:15 info: All unit tests passed.
+2022-06-04 12:10:20 info: All steps were completed successfully
+2022-06-04 05:46:32 info: -------------------------------------------------
+2022-06-04 05:46:32 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-06-04 05:46:32 info: -------------------------------------------------
+2022-06-04 05:46:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (1 ms)
+    ✕ should not modify the original `fruitBasket` array (4 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toBe(expected) // Object.is equality
+
+    If it should pass with deep equality, replace "toBe" with "toStrictEqual"
+
+    Expected: ["apple", "lemon", "grapefruit", "lemon", "banana", "watermelon", "lemon"]
+    Received: serializes to the same string
+
+      43 |     const originalFruitBasketContents = [...fruitBasket];
+      44 |     // TODO replace next line with your code
+    > 45 |     expect(originalFruitBasketContents).toBe(fruitBasket);
+         |                                         ^
+      46 |   });
+      47 |
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:45:41)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    ReferenceError: basketFruit is not defined
+
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      49 |     // TODO replace next line with your code
+    > 50 |     expect(sanitizeFruitBasket(basketFruit, fruit)).toBe([
+         |                                ^
+      51 |       'apple',
+      52 |       'grapefruit',
+      53 |       'banana',
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        0.52 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2022-06-04 05:46:36 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  50:32  error  'basketFruit' is not defined  no-undef
+  50:45  error  'fruit' is not defined        no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2022-06-04 05:47:41 info: -------------------------------------------------
+2022-06-04 05:47:41 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-06-04 05:47:41 info: -------------------------------------------------
+2022-06-04 05:47:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (2 ms)
+    ✓ should not modify the original `fruitBasket` array
+    ✕ should return a new array that does not include the unwanted `lemon`
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    ReferenceError: basketFruit is not defined
+
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      49 |     // TODO replace next line with your code
+    > 50 |     expect(sanitizeFruitBasket(basketFruit, fruit)).toBe([
+         |                                ^
+      51 |       'apple',
+      52 |       'grapefruit',
+      53 |       'banana',
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.382 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2022-06-04 05:47:44 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  50:32  error  'basketFruit' is not defined  no-undef
+  50:45  error  'fruit' is not defined        no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2022-06-04 05:51:18 info: -------------------------------------------------
+2022-06-04 05:51:18 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-06-04 05:51:18 info: -------------------------------------------------
+2022-06-04 05:51:20 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    ✓ should take two parameters (2 ms)
+    ✓ should not modify the original `fruitBasket` array (1 ms)
+    ✕ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    ReferenceError: basketFruit is not defined
+
+      48 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      49 |     // TODO replace next line with your code
+    > 50 |     expect(sanitizeFruitBasket(basketFruit, fruit)).toEqual([
+         |                                ^
+      51 |       'apple',
+      52 |       'grapefruit',
+      53 |       'banana',
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.389 s, estimated 1 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+2022-06-04 05:51:21 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  50:32  error  'basketFruit' is not defined  no-undef
+  50:45  error  'fruit' is not defined        no-undef
+
+✖ 2 problems (2 errors, 0 warnings)
+
+
+2022-06-04 05:53:54 info: -------------------------------------------------
+2022-06-04 05:53:54 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-06-04 05:53:54 info: -------------------------------------------------
+2022-06-04 05:53:56 info: All unit tests passed.
+2022-06-04 05:53:58 info: All steps were completed successfully
+2022-06-04 05:57:26 info: ------------------------------------------
+2022-06-04 05:57:26 info: >>> Running Unit Test `ex4-observable` <<<
+2022-06-04 05:57:26 info: ------------------------------------------
+2022-06-04 05:57:28 info: All unit tests passed.
+2022-06-04 05:57:31 info: All steps were completed successfully
+2022-06-04 05:57:49 info: --------------------------------------
+2022-06-04 05:57:49 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-06-04 05:57:49 info: --------------------------------------
+2022-06-04 05:57:51 error: *** Unit Test Error Report ***
+
+✕ wallet q4: What is displayed in the console?
+✕ wallet q5: The owner of the wallet with insufficient funds is?
+
+
+Command failed: npx jest ex5-wallet.test.js --colors --reporters="/Users/test/HYF-homework/Homework-class38/test-runner/CustomReporter.js"
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+2022-06-04 05:58:56 info: --------------------------------------
+2022-06-04 05:58:56 info: >>> Running Unit Test `ex5-wallet` <<<
+2022-06-04 05:58:56 info: --------------------------------------
+2022-06-04 05:58:58 info: All unit tests passed.
+2022-06-04 05:59:01 info: All steps were completed successfully
+2022-06-04 05:59:25 info: ----------------------------------------------
+2022-06-04 05:59:25 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2022-06-04 05:59:25 info: ----------------------------------------------
+2022-06-04 05:59:26 info: All unit tests passed.
+2022-06-04 05:59:29 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:47:21 - Unknown word (Mones)
+
+2022-06-04 05:59:48 info: ------------------------------------------------------
+2022-06-04 05:59:48 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2022-06-04 05:59:48 info: ------------------------------------------------------
+2022-06-04 05:59:50 info: All unit tests passed.
+2022-06-04 05:59:52 info: All steps were completed successfully
+2022-06-04 06:00:00 info: -------------------------------------------------
+2022-06-04 06:00:00 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2022-06-04 06:00:00 info: -------------------------------------------------
+2022-06-04 06:00:02 info: All unit tests passed.
+2022-06-04 06:00:04 info: All steps were completed successfully
+2022-06-04 06:00:18 info: -------------------------------------------------
+2022-06-04 06:00:18 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2022-06-04 06:00:18 info: -------------------------------------------------
+2022-06-04 06:00:20 info: All unit tests passed.
+2022-06-04 06:00:23 info: All steps were completed successfully
