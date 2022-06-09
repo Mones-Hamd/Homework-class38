@@ -20,7 +20,7 @@ function createObservable() {
       return subscribers.push(subscriber);
     },
     notify: function (message) {
-      return subscribers.forEach((item) => item(message));
+      return subscribers.forEach((subscriber) => subscriber(message));
     },
   };
 }
