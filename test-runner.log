@@ -948,3 +948,384 @@ ex1-giveCompliment.js:47:21 - Unknown word (Mones)
 2022-06-04 06:00:18 info: -------------------------------------------------
 2022-06-04 06:00:20 info: All unit tests passed.
 2022-06-04 06:00:23 info: All steps were completed successfully
+2022-06-11 11:06:48 info: ----------------------------------------
+2022-06-11 11:06:48 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-06-11 11:06:48 info: ----------------------------------------
+2022-06-11 11:06:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✕ HTML should be syntactically valid (134 ms)
+    ✕ should have all TODO comments removed
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (1 ms)
+    ✓ should contain a <ul> with 3 <li> elements (2 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:134  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:298  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:453  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        3.593 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-06-11 11:06:56 error: *** ESLint Report ***
+
+ex1-bookList/index.js
+  22:7  warning  'ulList' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  23:7  warning  'imgSrc' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  30:9  warning  'p' is never reassigned. Use 'const' instead       no-autofix/prefer-const
+  31:9  warning  'li' is never reassigned. Use 'const' instead      no-autofix/prefer-const
+  32:9  warning  'img' is never reassigned. Use 'const' instead     no-autofix/prefer-const
+
+✖ 5 problems (0 errors, 5 warnings)
+
+
+2022-06-11 11:08:14 info: ----------------------------------------
+2022-06-11 11:08:14 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-06-11 11:08:14 info: ----------------------------------------
+2022-06-11 11:08:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✓ HTML should be syntactically valid (124 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✕ should contain a <ul> with 3 <li> elements (3 ms)
+    ✕ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    ✕ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › should contain a <ul> with 3 <li> elements
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      52 |     const nodeList = document.querySelectorAll('ul > li');
+      53 |     const result = nodeList ? nodeList.length : 0;
+    > 54 |     expect(result).toBe(3);
+         |                    ^
+      55 |   });
+      56 |
+      57 |   test('should contain an <li> with title and author for each book of the `myBooks` array', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:54:20)
+
+  ● Generated HTML › should contain an <li> with title and author for each book of the `myBooks` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "The Design of Everyday Things"
+    Received: ""
+
+      63 |       : '';
+      64 |     state.titlesAndAuthors.forEach((string) =>
+    > 65 |       expect(result).toEqual(expect.stringContaining(string))
+         |                      ^
+      66 |     );
+      67 |   });
+      68 |
+
+      at forEach (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:65:22)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:64:28)
+
+  ● Generated HTML › should contain an <img> element for each book
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 3
+    Received: 0
+
+      70 |     const nodeList = document.querySelectorAll('li img');
+      71 |     const result = nodeList ? nodeList.length : 0;
+    > 72 |     expect(result).toBe(3);
+         |                    ^
+      73 |   });
+      74 | });
+      75 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:72:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 2 passed, 6 total
+Snapshots:   0 total
+Time:        2.982 s, estimated 4 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-06-11 11:55:14 info: ---------------------------------------
+2022-06-11 11:55:14 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-11 11:55:14 info: ---------------------------------------
+2022-06-11 11:55:19 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (129 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✕ each <li> should have the CSS class `list-item` (2 ms)
+    ✕ each <li> should rendered red (31 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+  ● Generated HTML › each <li> should have the CSS class `list-item`
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      32 |     const nodeList = document.querySelectorAll('li');
+      33 |     const classNames = [...nodeList].map((node) => node.className);
+    > 34 |     expect(classNames.every((name) => name === 'list-item')).toBeTruthy();
+         |                                                              ^
+      35 |   });
+      36 |
+      37 |   test('each <li> should rendered red', () => {
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:34:62)
+
+  ● Generated HTML › each <li> should rendered red
+
+    expect(received).toBeTruthy()
+
+    Received: false
+
+      40 |       (node) => window.getComputedStyle(node).color
+      41 |     );
+    > 42 |     expect(colors.every((color) => color === 'red')).toBeTruthy();
+         |                                                      ^
+      43 |   });
+      44 | });
+      45 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:42:54)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 1 passed, 5 total
+Snapshots:   0 total
+Time:        3.378 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-11 11:55:23 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:15:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:15:25 - Unknown word (Hamd)
+
+2022-06-12 12:04:26 info: ---------------------------------------
+2022-06-12 12:04:26 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-12 12:04:26 info: ---------------------------------------
+2022-06-12 12:04:31 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (132 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ each <li> should have the CSS class `list-item` (2 ms)
+    ✓ each <li> should rendered red (32 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.712 s, estimated 4 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-12 12:04:33 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:16:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:16:25 - Unknown word (Hamd)
+ex2-aboutMe/index.js:21:12 - Unknown word (classname)
+
+2022-06-12 12:04:41 info: ---------------------------------------
+2022-06-12 12:04:41 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-12 12:04:41 info: ---------------------------------------
+2022-06-12 12:04:45 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (126 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (33 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.671 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-12 12:04:48 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:16:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:16:25 - Unknown word (Hamd)
+ex2-aboutMe/index.js:21:12 - Unknown word (classname)
+

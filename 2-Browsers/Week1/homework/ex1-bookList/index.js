@@ -17,7 +17,7 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 -----------------------------------------------------------------------------*/
 //cspell: enable
 
-function createBookList(books = []) {
+function createBookList(books) {
   // TODO your code goes in here, return the ul element
   const ulList = document.createElement('ul');
   const imgSrc = [
@@ -36,10 +36,12 @@ function createBookList(books = []) {
     p.textContent = `${book.title} - ${book.author}`;
     p.append(img);
     li.appendChild(p);
+    ulList.appendChild(li);
     book.alreadyRead
       ? (li.style.backgroundColor = 'green')
       : (li.style.backgroundColor = 'red');
   });
+
   return ulList;
 }
 
