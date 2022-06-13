@@ -32,7 +32,6 @@ function createBookList(books) {
     const img = document.createElement('img');
     img.src = `${imgSrc[indx]}`;
     li.className = 'background-color';
-    li.textContent = Array.from(book);
     p.textContent = `${book.title} - ${book.author}`;
     p.append(img);
     li.appendChild(p);

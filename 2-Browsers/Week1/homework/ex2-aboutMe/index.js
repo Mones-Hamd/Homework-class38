@@ -12,10 +12,8 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 // TODO add your JavaScript code here.
 //replace spans with string
 const spans = document.querySelectorAll('ul li span');
-console.log(spans);
 const aboutMe = ['Mones Hamd', 'Pizza', 'Syria'];
 spans.forEach((span, index) => {
-  console.log(span);
   span.replaceWith(aboutMe[index]);
 });
 // give li classname
