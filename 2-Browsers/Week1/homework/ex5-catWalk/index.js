@@ -24,29 +24,29 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 -----------------------------------------------------------------------------*/
 let pixels = 0;
 let timer = 0;
-function catWalk() {
-  // TODO complete this function
+const img = document.querySelector('img');
 
-  let img = document.querySelector('img');
-  img.style.left = `${(pixels += 10)}px`;
-  if (pixels === 570) {
-    timer++;
-    img.src =
-      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'; //gif stop moving
-    pixels = pixels - 10;
-    console.log(timer);
-    if (timer % 100 === 0) {
-      //timer still increasing
-      pixels = pixels + 10;
-      img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
-    }
+function catWalk() {
+  if (pixels < window.innerWidth / 2 || pixels > window.innerWidth / 2) {
+    img.style.left = `${(pixels += 10)}px`;
   }
-  if (pixels > 1400) {
+  if (pixels === window.innerWidth / 2 && timer === 0) {
+    img.src =
+      'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
+  }
+  if (pixels === window.innerWidth / 2 && timer < 100) {
+    timer++;
+  }
+  if (timer === 100) {
+    pixels += 10;
+    img.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif';
+    timer = 0;
+  }
+
+  if (pixels === window.innerWidth) {
     pixels = 0;
   }
 }
-
-// TODO execute `catWalk` when the browser has completed loading the page
 window.addEventListener('load', () => {
   setInterval(catWalk, 50);
 });

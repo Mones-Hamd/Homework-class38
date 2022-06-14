@@ -1329,3 +1329,189 @@ ex2-aboutMe/index.js:16:19 - Unknown word (Mones)
 ex2-aboutMe/index.js:16:25 - Unknown word (Hamd)
 ex2-aboutMe/index.js:21:12 - Unknown word (classname)
 
+2022-06-13 11:51:33 info: ----------------------------------------------
+2022-06-13 11:51:33 info: >>> Running Unit Test `ex1-giveCompliment` <<<
+2022-06-13 11:51:33 info: ----------------------------------------------
+2022-06-13 11:51:37 info: All unit tests passed.
+2022-06-13 11:51:41 error: *** Spell Checker Report ***
+
+ex1-giveCompliment.js:47:21 - Unknown word (Mones)
+
+2022-06-13 11:51:57 info: ---------------------------------------
+2022-06-13 11:51:57 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-13 11:51:57 info: ---------------------------------------
+2022-06-13 11:52:04 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (214 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        4.153 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-06-13 11:52:05 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+  30:7  warning  'img' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-06-13 11:53:19 info: ---------------------------------------
+2022-06-13 11:53:19 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-13 11:53:19 info: ---------------------------------------
+2022-06-13 11:53:26 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (208 ms)
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()` (1 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event (1 ms)
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.911 s, estimated 5 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-06-13 12:54:43 info: ---------------------------------------
+2022-06-13 12:54:43 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-13 12:54:43 info: ---------------------------------------
+2022-06-13 12:54:49 info: All unit tests passed.
+2022-06-13 12:54:53 info: All steps were completed successfully
+2022-06-13 12:58:03 info: ---------------------------------------
+2022-06-13 12:58:03 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-13 12:58:03 info: ---------------------------------------
+2022-06-13 12:58:10 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (198 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()` (1 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.954 s, estimated 4 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-06-14 01:26:50 info: ---------------------------------------
+2022-06-14 01:26:50 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-14 01:26:50 info: ---------------------------------------
+2022-06-14 01:26:56 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex5-catWalk.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex5-catWalk.test.js
+  catWalk
+    ✓ HTML should be syntactically valid (136 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` and/or `setTimeout()`
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● catWalk › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        3.638 s
+Ran all test suites matching /ex5-catWalk.test.js/i.
+2022-06-14 01:26:57 error: *** ESLint Report ***
+
+ex5-catWalk/index.js
+  46:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2022-06-14 01:27:48 info: ---------------------------------------
+2022-06-14 01:27:48 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-06-14 01:27:48 info: ---------------------------------------
+2022-06-14 01:27:52 info: All unit tests passed.
+2022-06-14 01:27:54 info: All steps were completed successfully
