@@ -9,8 +9,6 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 const div = document.createElement('div');
 const span = document.createElement('span');
 function addCurrentTime() {
-  // TODO complete this function
-
   span.textContent = new Date().toLocaleTimeString();
 }
 div.appendChild(span);
@@ -18,4 +16,3 @@ document.body.appendChild(div);
 window.addEventListener('load', () => {
   setInterval(addCurrentTime, 1000);
 });
-// TODO execute `addCurrentTime` when the browser has completed loading the page

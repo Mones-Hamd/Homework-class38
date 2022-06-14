@@ -1515,3 +1515,657 @@ ex5-catWalk/index.js
 2022-06-14 01:27:48 info: ---------------------------------------
 2022-06-14 01:27:52 info: All unit tests passed.
 2022-06-14 01:27:54 info: All steps were completed successfully
+2022-06-14 01:30:22 info: ----------------------------------------
+2022-06-14 01:30:22 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-06-14 01:30:22 info: ----------------------------------------
+2022-06-14 01:30:27 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✕ HTML should be syntactically valid (132 ms)
+    ✕ should have all TODO comments removed
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (2 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (2 ms)
+    ✓ should contain an <img> element for each book (1 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:134  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:298  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:453  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        2.826 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-06-14 01:30:50 info: ---------------------------------------
+2022-06-14 01:30:50 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 01:30:50 info: ---------------------------------------
+2022-06-14 01:30:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (131 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (1 ms)
+    ✓ each <li> should have the CSS class `list-item` (2 ms)
+    ✓ each <li> should rendered red (34 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.937 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 01:30:57 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:15:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:15:25 - Unknown word (Hamd)
+ex2-aboutMe/index.js:19:12 - Unknown word (classname)
+
+2022-06-14 01:31:33 info: ------------------------------------------
+2022-06-14 01:31:33 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-06-14 01:31:33 info: ------------------------------------------
+2022-06-14 01:31:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ should set the `src` property (1 ms)
+    ✓ should set the `srcset` property
+
+  ● hijackLogo › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.463 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2022-06-14 01:31:37 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:12:43 - Unknown word (Xdpd)
+
+2022-06-14 01:32:00 info: --------------------------------------------
+2022-06-14 01:32:00 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-06-14 01:32:00 info: --------------------------------------------
+2022-06-14 01:32:06 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    ✓ HTML should be syntactically valid (127 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should use `setInterval()` (1 ms)
+    ✓ should not call `setInterval()` more than once (2003 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.884 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2022-06-14 01:32:59 info: ----------------------------------------
+2022-06-14 01:32:59 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-06-14 01:32:59 info: ----------------------------------------
+2022-06-14 01:33:04 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-bookList.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex1-bookList.test.js
+  Generated HTML
+    ✕ HTML should be syntactically valid (152 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✓ should contain a <ul> that is a child of <div id="bookList"> (2 ms)
+    ✓ should contain a <ul> with 3 <li> elements (2 ms)
+    ✓ should contain an <li> with title and author for each book of the `myBooks` array (3 ms)
+    ✓ should contain an <img> element for each book (2 ms)
+
+  ● Generated HTML › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      11:134  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:298  error  <img> is missing required \"alt\" attribute  wcag/h37
+      11:453  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 3 problems (3 errors, 0 warnings)
+    "
+
+      44 |   const { results } = htmlValidate.validateString(htmlText);
+      45 |   const validationReport = stylish(results);
+    > 46 |   expect(validationReport).toBe('');
+         |                            ^
+      47 | }
+      48 |
+      49 | module.exports = {
+
+      at validateHTML (test-runner/jsdom-helpers.js:46:28)
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex1-bookList.test.js:42:5)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 4 passed, 6 total
+Snapshots:   0 total
+Time:        2.744 s, estimated 3 s
+Ran all test suites matching /ex1-bookList.test.js/i.
+2022-06-14 02:06:12 info: ----------------------------------------
+2022-06-14 02:06:12 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-06-14 02:06:12 info: ----------------------------------------
+2022-06-14 02:06:17 info: All unit tests passed.
+2022-06-14 02:06:19 info: All steps were completed successfully
+2022-06-14 02:06:49 info: ---------------------------------------
+2022-06-14 02:06:49 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 02:06:49 info: ---------------------------------------
+2022-06-14 02:06:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (143 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (33 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.828 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 02:06:56 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:15:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:15:25 - Unknown word (Hamd)
+ex2-aboutMe/index.js:19:12 - Unknown word (classname)
+
+2022-06-14 02:07:37 info: ---------------------------------------
+2022-06-14 02:07:37 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 02:07:37 info: ---------------------------------------
+2022-06-14 02:07:42 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (147 ms)
+    ✕ should have all TODO comments removed (1 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (39 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.798 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 02:07:44 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:15:19 - Unknown word (Mones)
+ex2-aboutMe/index.js:15:25 - Unknown word (Hamd)
+ex2-aboutMe/index.js:19:12 - Unknown word (classname)
+
+2022-06-14 02:08:58 info: ---------------------------------------
+2022-06-14 02:08:58 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 02:08:58 info: ---------------------------------------
+2022-06-14 02:09:03 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (150 ms)
+    ✕ should have all TODO comments removed (3 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (33 ms)
+
+  ● Generated HTML › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.825 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 02:09:05 error: *** Spell Checker Report ***
+
+ex2-aboutMe/index.js:19:12 - Unknown word (classname)
+
+2022-06-14 02:09:57 info: ---------------------------------------
+2022-06-14 02:09:57 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 02:09:57 info: ---------------------------------------
+2022-06-14 02:10:01 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (133 ms)
+    ✓ should have all TODO comments removed
+    ✕ the body font-family should be `Arial, sans-serif` (4 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (33 ms)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.729 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 02:10:45 info: ---------------------------------------
+2022-06-14 02:10:45 info: >>> Running Unit Test `ex2-aboutMe` <<<
+2022-06-14 02:10:45 info: ---------------------------------------
+2022-06-14 02:10:50 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-aboutMe.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
+  Generated HTML
+    ✓ should be syntactically valid (142 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (3 ms)
+    ✓ each <li> should have the CSS class `list-item` (1 ms)
+    ✓ each <li> should rendered red (35 ms)
+
+  ● Generated HTML › the body font-family should be `Arial, sans-serif`
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: StringContaining "Arial"
+    Received: ""
+
+      25 |   test('the body font-family should be `Arial, sans-serif`', () => {
+      26 |     const fontFamily = document.body.style.fontFamily;
+    > 27 |     expect(fontFamily).toEqual(expect.stringContaining('Arial'));
+         |                        ^
+      28 |     expect(fontFamily).toEqual(expect.stringContaining('sans-serif'));
+      29 |   });
+      30 |
+
+      at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        2.855 s, estimated 3 s
+Ran all test suites matching /ex2-aboutMe.test.js/i.
+2022-06-14 02:12:05 info: ------------------------------------------
+2022-06-14 02:12:05 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-06-14 02:12:05 info: ------------------------------------------
+2022-06-14 02:12:07 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    ✕ should have all TODO comments removed (3 ms)
+    ✓ should set the `src` property
+    ✓ should set the `srcset` property
+
+  ● hijackLogo › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.37 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2022-06-14 02:12:09 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:12:43 - Unknown word (Xdpd)
+
+2022-06-14 02:12:52 info: ------------------------------------------
+2022-06-14 02:12:52 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-06-14 02:12:52 info: ------------------------------------------
+2022-06-14 02:12:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-hijackLogo.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex3-hijackLogo.test.js
+  hijackLogo
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should set the `src` property (1 ms)
+    ✓ should set the `srcset` property (1 ms)
+
+  ● hijackLogo › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        0.394 s, estimated 1 s
+Ran all test suites matching /ex3-hijackLogo.test.js/i.
+2022-06-14 02:12:57 error: *** Spell Checker Report ***
+
+ex3-hijackLogo.js:12:51 - Unknown word (Xdpd)
+
+2022-06-14 02:13:28 info: --------------------------------------------
+2022-06-14 02:13:28 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-06-14 02:13:28 info: --------------------------------------------
+2022-06-14 02:13:34 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex4-whatsTheTime.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  2-Browsers/Week1/unit-tests/ex4-whatsTheTime.test.js
+  whatsTheTime
+    ✓ HTML should be syntactically valid (128 ms)
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ should use `setInterval()`
+    ✓ should not call `setInterval()` more than once (2007 ms)
+    ✓ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✓ `window.onload` or `window.addEventListener` should not call its event handler function
+
+  ● whatsTheTime › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 passed, 6 total
+Snapshots:   0 total
+Time:        4.821 s, estimated 5 s
+Ran all test suites matching /ex4-whatsTheTime.test.js/i.
+2022-06-14 02:14:20 info: --------------------------------------------
+2022-06-14 02:14:20 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-06-14 02:14:20 info: --------------------------------------------
+2022-06-14 02:14:26 info: All unit tests passed.
+2022-06-14 02:14:29 info: All steps were completed successfully

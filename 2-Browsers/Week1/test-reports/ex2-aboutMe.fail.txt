@@ -6,27 +6,11 @@ Browserslist: caniuse-lite is outdated. Please run:
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
  FAIL  2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js
   Generated HTML
-    ✓ should be syntactically valid (126 ms)
-    ✕ should have all TODO comments removed (2 ms)
-    ✕ the body font-family should be `Arial, sans-serif` (2 ms)
+    ✓ should be syntactically valid (142 ms)
+    ✓ should have all TODO comments removed (1 ms)
+    ✕ the body font-family should be `Arial, sans-serif` (3 ms)
     ✓ each <li> should have the CSS class `list-item` (1 ms)
-    ✓ each <li> should rendered red (33 ms)
-
-  ● Generated HTML › should have all TODO comments removed
-
-    expect(received).toBeFalsy()
-
-    Received: true
-
-      103 | function testTodosRemoved(getSource) {
-      104 |   test('should have all TODO comments removed', () => {
-    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
-          |                                          ^
-      106 |   });
-      107 | }
-      108 |
-
-      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+    ✓ each <li> should rendered red (35 ms)
 
   ● Generated HTML › the body font-family should be `Arial, sans-serif`
 
@@ -46,12 +30,7 @@ Browserslist: caniuse-lite is outdated. Please run:
       at Object.<anonymous> (2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js:27:24)
 
 Test Suites: 1 failed, 1 total
-Tests:       2 failed, 3 passed, 5 total
+Tests:       1 failed, 4 passed, 5 total
 Snapshots:   0 total
-Time:        2.671 s, estimated 3 s
+Time:        2.855 s, estimated 3 s
 Ran all test suites matching /ex2-aboutMe.test.js/i.
-*** Spell Checker Report ***
-
-ex2-aboutMe/index.js:16:19 - Unknown word (Mones)
-ex2-aboutMe/index.js:16:25 - Unknown word (Hamd)
-ex2-aboutMe/index.js:21:12 - Unknown word (classname)

@@ -18,7 +18,6 @@ https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 //cspell: enable
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
   const ulList = document.createElement('ul');
   const imgSrc = [
     'assets/the_design_of_everyday_things.jpg',
@@ -31,6 +30,7 @@ function createBookList(books) {
     const li = document.createElement('li');
     const img = document.createElement('img');
     img.src = `${imgSrc[indx]}`;
+    img.alt = `${imgSrc[indx]} image`;
     li.className = 'background-color';
     p.textContent = `${book.title} - ${book.author}`;
     p.append(img);

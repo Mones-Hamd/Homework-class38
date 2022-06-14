@@ -9,14 +9,11 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 3. Look in the css file!
 ------------------------------------------------------------------------------*/
 
-// TODO add your JavaScript code here.
-//replace spans with string
 const spans = document.querySelectorAll('ul li span');
-const aboutMe = ['Mones Hamd', 'Pizza', 'Syria'];
+const aboutMe = ['liza', 'Pizza', 'Syria'];
 spans.forEach((span, index) => {
   span.replaceWith(aboutMe[index]);
 });
-// give li classname
-const liEl = document.querySelectorAll('ul li');
+
+const liEl = document.querySelectorAll('li');
 liEl.forEach((li) => (li.className = 'list-item'));
-console.log(liEl);
