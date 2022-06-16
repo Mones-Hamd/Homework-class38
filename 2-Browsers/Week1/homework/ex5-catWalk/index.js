@@ -25,16 +25,20 @@ Full description at: https://github.com/HackYourFuture/Homework/tree/main/2-Brow
 let pixels = 0;
 let timer = 0;
 const img = document.querySelector('img');
+const fullWidth = Math.round(window.innerWidth / 10) * 10;
+const midile = Math.round((fullWidth - img.width) / 2 / 10) * 10;
 
 function catWalk() {
-  if (pixels < window.innerWidth / 2 || pixels > window.innerWidth / 2) {
+  console.log(midile);
+
+  if (pixels < midile || pixels > midile) {
     img.style.left = `${(pixels += 10)}px`;
   }
-  if (pixels === window.innerWidth / 2 && timer === 0) {
+  if (pixels === midile && timer === 0) {
     img.src =
       'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
   }
-  if (pixels === window.innerWidth / 2 && timer < 100) {
+  if (pixels === midile && timer < 100) {
     timer++;
   }
   if (timer === 100) {
@@ -43,7 +47,7 @@ function catWalk() {
     timer = 0;
   }
 
-  if (pixels === window.innerWidth) {
+  if (pixels > fullWidth) {
     pixels = 0;
   }
 }
