@@ -18,7 +18,7 @@ function checkDoubleDigits(number) {
     if (number >= 10 && number < 100) {
       resolve('This is a double digit number!');
     } else {
-      reject(new Error(number));
+      reject(new Error(`Expected a double digit number but got ${number}`));
     }
   });
 }
