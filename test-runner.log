@@ -1,0 +1,124 @@
+2022-07-11 02:21:02 info: --------------------------------------------
+2022-07-11 02:21:02 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-07-11 02:21:02 info: --------------------------------------------
+2022-07-11 02:21:02 warn: A unit test file was not provided.
+2022-07-11 02:21:05 info: All steps were completed successfully
+2022-07-11 02:21:13 info: ---------------------------------------------
+2022-07-11 02:21:13 info: >>> Running Unit Test `ex1-programmerFun` <<<
+2022-07-11 02:21:13 info: ---------------------------------------------
+2022-07-11 02:21:19 info: All unit tests passed.
+2022-07-11 02:21:22 info: All steps were completed successfully
+2022-07-11 02:21:30 info: ------------------------------------------
+2022-07-11 02:21:30 info: >>> Running Unit Test `ex2-pokemonApp` <<<
+2022-07-11 02:21:30 info: ------------------------------------------
+2022-07-11 02:21:34 info: All unit tests passed.
+2022-07-11 02:21:37 info: All steps were completed successfully
+2022-07-11 02:21:52 info: -----------------------------------------
+2022-07-11 02:21:52 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 02:21:52 info: -----------------------------------------
+2022-07-11 02:21:52 info: Exercise has not yet been modified
+2022-07-11 02:21:54 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-rollAnAce.test.js --colors
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+ FAIL  3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js
+  ex3-rollAnAce
+    ✕ should have all TODO comments removed (2 ms)
+    ✓ `rollDieUntil` should not contain unneeded console.log calls
+    ✕ should not include a recursive call
+    ✕ should use async/wait
+    ✕ should use try/catch
+    ✓ should resolve as soon as a die settles on an ACE (21 ms)
+    ✓ should reject with an Error when a die rolls off the table (14 ms)
+
+  ● ex3-rollAnAce › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      103 | function testTodosRemoved(getSource) {
+      104 |   test('should have all TODO comments removed', () => {
+    > 105 |     expect(/\bTODO\b/.test(getSource())).toBeFalsy();
+          |                                          ^
+      106 |   });
+      107 | }
+      108 |
+
+      at Object.<anonymous> (test-runner/unit-test-helpers.js:105:42)
+
+  ● ex3-rollAnAce › should not include a recursive call
+
+    expect(received).toBeUndefined()
+
+    Received: true
+
+      53 |
+      54 |   test('should not include a recursive call', () => {
+    > 55 |     expect(state.recursive).toBeUndefined();
+         |                             ^
+      56 |   });
+      57 |
+      58 |   test('should use async/wait', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:55:29)
+
+  ● ex3-rollAnAce › should use async/wait
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      57 |
+      58 |   test('should use async/wait', () => {
+    > 59 |     expect(state.async).toBeDefined();
+         |                         ^
+      60 |     expect(state.await).toBeDefined();
+      61 |   });
+      62 |
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:59:25)
+
+  ● ex3-rollAnAce › should use try/catch
+
+    expect(received).toBeDefined()
+
+    Received: undefined
+
+      62 |
+      63 |   test('should use try/catch', () => {
+    > 64 |     expect(state.tryCatch).toBeDefined();
+         |                            ^
+      65 |   });
+      66 |
+      67 |   test('should resolve as soon as a die settles on an ACE', async () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week2/unit-tests/ex3-rollAnAce.test.js:64:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 3 passed, 7 total
+Snapshots:   0 total
+Time:        0.593 s
+Ran all test suites matching /ex3-rollAnAce.test.js/i.
+2022-07-11 02:22:22 info: -----------------------------------------
+2022-07-11 02:22:22 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2022-07-11 02:22:22 info: -----------------------------------------
+2022-07-11 02:22:24 info: All unit tests passed.
+2022-07-11 02:22:27 info: All steps were completed successfully
+2022-07-11 02:22:36 info: ----------------------------------------
+2022-07-11 02:22:36 info: >>> Running Unit Test `ex4-diceRace` <<<
+2022-07-11 02:22:36 info: ----------------------------------------
+2022-07-11 02:22:38 info: All unit tests passed.
+2022-07-11 02:22:41 info: All steps were completed successfully
+2022-07-11 02:22:50 info: ----------------------------------------
+2022-07-11 02:22:50 info: >>> Running Unit Test `ex5-vscDebug` <<<
+2022-07-11 02:22:50 info: ----------------------------------------
+2022-07-11 02:22:50 warn: A unit test file was not provided.
+2022-07-11 02:22:53 info: All steps were completed successfully
+2022-07-11 02:23:04 info: --------------------------------------------
+2022-07-11 02:23:04 info: >>> Running Unit Test `ex6-browserDebug` <<<
+2022-07-11 02:23:04 info: --------------------------------------------
+2022-07-11 02:23:04 warn: A unit test file was not provided.
+2022-07-11 02:23:06 info: All steps were completed successfully
