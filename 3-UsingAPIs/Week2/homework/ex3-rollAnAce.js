@@ -1,4 +1,5 @@
 'use strict';
+const { result } = require('lodash');
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-UsingAPIs/Week2/README.md#exercise-3-roll-an-ace
 
@@ -13,16 +14,16 @@ Full description at: https://github.com/HackYourFuture/Homework/blob/main/3-Usin
 const rollDie = require('../../helpers/pokerDiceRoller');
 
 async function rollDieUntil(wantedValue) {
-  let roll = '';
-  while (roll !== wantedValue) {
-    roll = await rollDie();
+  let value = '';
+  while (value !== wantedValue) {
+    value = await rollDie();
   }
-  return roll;
+  return value;
 }
 async function main() {
   try {
-    const roll = await rollDieUntil('ACE');
-    console.log('Resolved!', roll);
+    const result = await rollDieUntil('ACE');
+    console.log('Resolved!', result);
   } catch (error) {
     console.log('Rejected!', error.message);
   }

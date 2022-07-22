@@ -24,39 +24,46 @@ parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
 async function fetchData(url) {
   const response = await fetch(url);
-  const data = response.json();
   if (response.ok) {
-    return data;
-  } else {
-    throw new Error('sorry! ,request failed');
+    return response.json();
   }
+  throw new Error('sorry! ,request failed');
 }
 
 function fetchAndPopulatePokemons(data) {
-  const select = document.querySelector('select');
+  const optionEl = document.querySelector('select');
   data.forEach((option) => {
     const createOption = document.createElement('option');
     createOption.value = `${option.url}`;
     createOption.textContent = `${option.name}`;
-    select.appendChild(createOption);
+    optionEl.appendChild(createOption);
   });
 
-  select.addEventListener('input', fetchImage);
+  optionEl.addEventListener('input', () => {
+    fetchImage();
+  });
 }
 
-function fetchImage() {
+async function fetchImage() {
   const imageContainer = document.querySelector('.image-container');
   imageContainer.textContent = '';
 
-  const options = document.querySelector('.select-option').value;
-  imageView(options);
+  const imageUrl = document.querySelector('select').value;
+
+  try {
+    const data = await fetchData(imageUrl);
+    const imagSrc = data.sprites.front_default;
+    imageView(imagSrc);
+  } catch (error) {
+    renderError(error);
+  }
 }
+
 function renderError(err) {
   const errElement = document.createElement('p');
   errElement.textContent = `${err}`;
   document.body.appendChild(errElement);
 }
-// DOM Functions
 
 const listView = () => {
   const listDiv = document.createElement('div');
@@ -69,11 +76,13 @@ const listView = () => {
   listDiv.append(imageDiv);
   return listDiv;
 };
+
 const listPage = () => {
   const container = document.querySelector('.container');
   const select = listView();
   container.append(select);
 };
+
 const buttonView = () => {
   const createButtonDiv = document.createElement('div');
   const createButton = document.createElement('button');
@@ -88,21 +97,22 @@ const buttonView = () => {
 const imageView = (src) => {
   const imageDiv = document.querySelector('.image-container');
   const image = document.createElement('img');
-  image.alt = `${src} Image`;
-  image.src = `${src}`;
-
+  image.src = src;
   imageDiv.appendChild(image);
 };
-async function main() {
-  try {
-    const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
-    const fetchApi = await fetchData(url);
-    buttonView();
-    listPage();
-    const btn = document.querySelector('.btn');
 
+async function main() {
+  const url = 'https://pokeapi.co/api/v2/pokemon?limit=151';
+  try {
+    const data = await fetchData(url);
+    buttonView();
+
+    const btn = document.querySelector('.btn');
     btn.addEventListener('click', () => {
-      fetchAndPopulatePokemons(fetchApi.results);
+      if (!document.querySelector('.select-section')) {
+        listPage();
+        fetchAndPopulatePokemons(data.results);
+      }
     });
   } catch (err) {
     renderError(err);
